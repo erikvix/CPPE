@@ -15,6 +15,9 @@ app.get('', function(req,res){
 app.get('/db', function(req, res){
     res.render('db')
 })
+app.get('/login', function(req, res){
+    res.render('login')
+})
 app.post('/db', urlencodedParser, function(req, res){
     res.json(req.body)
 })

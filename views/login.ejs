@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+    crossorigin="anonymous"
+  />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <main class="background">
+        <nav class="card">
+            <h2 class="title">Login</h2>
+            <form action="/add" method="POST">
+             <div class="login">
+                <p id="error" name="erro"></p>
+                <input class="input__bar" type="text" name="cpf" placeholder="CPF">
+                <i class="bx bx-envelope test"></i>
+                <input class="input__bar" type="password" name="senha" placeholder="Senha"></input>
+                <i
+                  id="password_visibility"
+                  class="bx bx-low-vision test password_visibility"
+                ></i>
+                <button class="btn" type="submit">Sign Up</button>
+                <p id="pass"></p>
+            <a href="/formulario" class="sign">Esqueceu a senha?</a>
+          </form>
+        </nav>
+    </main>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        :root {
+      --main-color: #0096E2;
+      --white: #ffffeb;
+      --black: #121316;
+    }
+    
+    body {
+      background-color: var(--main-color);
+      margin: 0;
+      padding: 0;
+    }
+    * {
+      font-family: "Poppins", sans-serif;
+      box-sizing: border-box;
+      text-decoration: none;
+      list-style: none;
+      color: var(--black);
+    }
+    input{
+        border: none;
+    }
+    .card {
+      margin-left: auto;
+      margin-right: auto;
+      padding: 2rem 0;
+      width: 30rem;
+      height: max-content;
+      background-color: var(--white);
+      border-radius: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 20px 60px #0081c2;
+    }
+    .background {
+      content: "";
+      position: absolute;
+      height: 100vh;
+      width: 100vw;
+      display: grid;
+      place-items: center;
+      background-color: var(--primary);
+      justify-items: center;
+    }
+    .user {
+      font-size: 6rem;
+      border-radius: 1rem;
+      color: var(--main-color);
+    }
+    
+    .social__card p {
+      font-weight: 600;
+    }
+    .social__card i {
+      font-size: 1.5rem;
+    }
+    
+    .login {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      /* margin-bottom: 1rem; */
+    }
+    .input__bar {
+      width: 25rem;
+      padding: 0.5rem;
+      border-bottom: 1px solid #bebebe;
+      background-color: transparent;
+    }
+    .login button {
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+    }
+    .login__content {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .login i {
+      font-size: 1.2rem;
+    }
+    .btn { margin-top: 1rem;
+      background-color: var(--main-color);
+      border-radius: 1rem;
+      width: 25rem;
+      border: 1px solid transparent;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      color: var(--white);
+      cursor: pointer;
+      transition: ease all 0.3s;
+    }
+    .btn:hover {
+      opacity: 0.9;
+    }
+     .title{
+      font-size: 2rem;
+     }
+    .terms,
+    .sign {
+      font-size: 0.8rem;
+      text-align: right;
+    }
+    .span {
+      color: var(--main-color);
+      font-weight: 600;
+    }
+    .sign {
+      font-weight: 600;
+      transition: ease all 0.3s;
+      text-decoration: none;
+      color: #121316;
+    }
+    .sign:hover {
+      color: var(--main-color);
+    }
+    #error {
+      color: #d3102d;
+    }
+    #pass {
+      color: rgb(60, 179, 31);
+    }
+    .displaynone {
+      display: none;
+    }
+    .test{
+      position: relative;
+      top: -30px;
+      left: 370px;
+    }
+    .password_visibility{
+      cursor: pointer;
+      width: max-content;
+    }
+    h2{
+      margin-top: 1rem;
+      margin-bottom: 0;
+    }
+    </style>
+</body>
+</html>
